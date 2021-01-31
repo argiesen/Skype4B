@@ -1,0 +1,52 @@
+# Kevin Bingham - 9.3.15
+# Updated 3.13.18
+
+$policySetType = Read-Host -Prompt "[M]ediation/SBA, [F]ront-end, or [E]dge?"
+Switch ($policySetType) {
+  M{
+    New-NetQosPolicy CSServerMedAudio -App MediationServerSvc.exe -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 57500 -DSCP 46
+    New-NetQosPolicy CSServerMedSignalingIn -App MediationServerSvc.exe -Protocol TCP -IPSrcPortStart 5067 -IPSrcPortEnd 5068 -DSCP 24
+    New-NetQosPolicy CSServerMedSignalingOut -App MediationServerSvc.exe -Protocol TCP -IPDstPortStart 5060 -IPDstPortEnd 5061 -DSCP 24
+    New-NetQosPolicy CSServerSignalingIn -Protocol TCP -IPSrcPortStart 5061 -IPSrcPortEnd 5061 -DSCP 24
+    New-NetQosPolicy CSServerSignalingOut -Protocol TCP -IPDstPortStart 5061 -IPDstPortEnd 5061 -DSCP 24
+ }
+  F{
+    New-NetQosPolicy CSServerConfAudio -App AVMCUSvc.exe -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 57500 -DSCP 46
+    New-NetQosPolicy CSServerConfVideo -App AVMCUSvc.exe -Protocol Both -IPSrcPortStart 57501 -IPSrcPortEnd 65535 -DSCP 34
+    New-NetQosPolicy CSServerConfAppSharing -App ASMCUSvc.exe -Protocol Both -IPSrcPortStart 40803 -IPSrcPortEnd 49151 -DSCP 18
+    New-NetQosPolicy CSServerConfAppSharingVideo -App ASMCUSvc.exe -Protocol Both -IPSrcPortStart 57501 -IPSrcPortEnd 65535 -DSCP 18
+    New-NetQosPolicy CSServerAppSrvAudio -App OcsAppServerHost.exe -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 57500 -DSCP 46
+    New-NetQosPolicy CSServerAppSrvVideo -App OcsAppServerHost.exe -Protocol Both -IPSrcPortStart 57501 -IPSrcPortEnd 65535 -DSCP 34
+    New-NetQosPolicy CSServerMedAudio -App MediationServerSvc.exe -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 57500 -DSCP 46
+    New-NetQosPolicy CSServerMedSignalingIn -App MediationServerSvc.exe -Protocol TCP -IPSrcPortStart 5067 -IPSrcPortEnd 5068 -DSCP 24
+    New-NetQosPolicy CSServerMedSignalingOut -App MediationServerSvc.exe -Protocol TCP -IPDstPortStart 5060 -IPDstPortEnd 5061 -DSCP 24
+    New-NetQosPolicy CSServerSignalingIn -Protocol TCP -IPSrcPortStart 5061 -IPSrcPortEnd 5061 -DSCP 24
+    New-NetQosPolicy CSServerSignalingOut -Protocol TCP -IPDstPortStart 5061 -IPDstPortEnd 5061 -DSCP 24
+  }
+  E{
+    $EdgeIntlIP = Read-Host -Prompt "Internal IP of Edge Server?"
+    while (!([ipaddress]::tryparse($EdgeIntIP,[ref]$null))) {
+      $EdgeIntIP = Read-Host -Prompt "Invalid IP address.  Internal IP of Edge Server?"
+    }
+    $ExchangeUMIPs = @()
+    while ($UMIPEntry -ne '') {
+      if (($UMIPEntry = Read-Host -Prompt "Exchange UM IP Address [blank to end list]") -eq '') {$ExchangeUMIPs=$ExchangeUMIPs} else {
+        if (!([ipaddress]::tryparse($UMIPEntry,[ref]$null))) {"Invalid IP Address."} else {
+          $ExchangeUMIPs+=$UMIPEntry
+        }
+      }
+    }
+    New-NetQosPolicy CSEdgeP2PAudio -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 49252 -IPSrcPrefix $EdgeIntIP -DSCP 46
+    New-NetQosPolicy CSEdgeP2PVideo -Protocol Both -IPSrcPortStart 57501 -IPSrcPortEnd 57601 -IPSrcPrefix $EdgeIntIP -DSCP 34
+    New-NetQosPolicy CSEdgeConfAudio -Protocol Both -IPSrcPortStart 49152 -IPSrcPortEnd 57500 -IPSrcPrefix $EdgeIntIP -DSCP 46
+    New-NetQosPolicy CSEdgeConfVideo -Protocol Both -IPSrcPortStart 57501 -IPSrcPortEnd 65535 -IPSrcPrefix $EdgeIntIP -DSCP 34
+    New-NetQosPolicy CSEdgeSignalingIn -Protocol TCP -IPSrcPortStart 5061 -IPSrcPortEnd 5061 -IPSrcPrefix $EdgeIntIP -DSCP 24
+    New-NetQosPolicy CSEdgeSignalingOut -Protocol TCP -IPDstPortStart 5061 -IPDstPortEnd 5061 -IPSrcPrefix $EdgeIntIP -DSCP 24
+    $ExchangeUMIPs | foreach {
+      New-NetQosPolicy CSEdgeUMAudio-$_ -Protocol UDP -IPDstPortStart 1024 -IPDstPortEnd 65535 -IPSrcPrefix $EdgeIntIP -IPDstPrefix $_ -DSCP 46
+    }
+  }
+  default{
+    "$policySetType is not a valid selection. Exiting."
+  }
+}
