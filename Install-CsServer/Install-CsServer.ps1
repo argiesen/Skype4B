@@ -1884,7 +1884,6 @@ $StartTime = Get-Date -f "MM/dd/yy HH:mm:ss"
 #$SQLExp14Url = "https://download.microsoft.com/download/E/A/E/EAE6F7FC-767A-4038-A954-49B8B05D04EB/Express%2064BIT/SQLEXPR_x64_ENU.exe"
 #$SQLExp14SP1Url = "https://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x64/SQLEXPR_x64_ENU.exe"
 $SQLExp14SP2Url = "https://download.microsoft.com/download/2/A/5/2A5260C3-4143-47D8-9823-E91BB0121F94/SQLEXPR_x64_ENU.exe"
-#$SQLConfTemplateUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=b6sS7ZtSccNog8Ic5Ielap92EYkDySfefEm9D%2fySKPM%3d&docid=0a97ed7b4f18f43cda93ee7b8996e28f5&rev=1"
 #https://msdn.microsoft.com/en-us/library/mt238290.aspx
 $SQLSMSUrl = "https://download.microsoft.com/download/9/3/3/933EA6DD-58C5-4B78-8BEC-2DF389C72BE0/SSMS-Setup-ENU.exe"
 
@@ -1916,8 +1915,7 @@ $OOSLanguagePackUrl = "https://download.microsoft.com/download/6/D/7/6D75C9CB-FF
 $OOSPatchUrl = "https://download.microsoft.com/download/8/B/A/8BAC033E-44E8-4FF5-B590-574D4DE4454C/wacserver2016-kb4011023-fullfile-x64-glb.exe"
 
 #KB2982006 (IIS Hotfix)
-#$KB2982006Url = "http://hotfixv4.microsoft.com/Windows%208.1/Windows%20Server%202012%20R2/sp1/Fix514814/9600/free/478232_intl_x64_zip.exe"
-$KB2982006Url = "https://hotfixv4.trafficmanager.net/Windows%208.1/Windows%20Server%202012%20R2/sp1/Fix514814/9600/free/478232_intl_x64_zip.exe"
+$KB2982006Url = "http://download.windowsupdate.com/d/msdownload/update/software/htfx/2014/09/windows8.1-kb2982006-x64_d96bea78d5746c48cb712c8ef936c29b5077367f.msu"
 $KB2919355Url = "https://download.microsoft.com/download/2/5/6/256CCCFB-5341-4A8D-A277-8A81B21A1E35/Windows8.1-KB2919355-x64.msu"
 $KB2919442Url = "https://download.microsoft.com/download/D/6/0/D60ED3E0-93A5-4505-8F6A-8D0A5DA16C8A/Windows8.1-KB2919442-x64.msu"
 
@@ -1934,9 +1932,7 @@ $VC2015Url = "https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-9
 
 #Utilities
 #7zip
-#$7zipExeUrl = "https://github.com/argiesen/CsScripts/raw/master/7zip/7z.exe"
 $7zipExeUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/7zip/1805_x64/7za.exe"
-#$7zipDllUrl = "https://github.com/argiesen/CsScripts/raw/master/7zip/7z.dll"
 $7zipDllUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/7zip/1805_x64/7za.dll"
 
 #DigiCert Utility
@@ -1951,8 +1947,7 @@ $WiresharkUrl = "https://1.na.dl.wireshark.org/win64/all-versions/Wireshark-win6
 $WinPcapUrl = "https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe"
 
 #AudioCodes Syslog
-$ACSyslogUrl = "https://ftp.audiocodes.com/?Command=Download&File=%2FsyslogViewer%2FsyslogViewer-setup.exe"
-#$ACSyslogUrl = "http://redirect.audiocodes.com/install/syslogViewer/syslogViewer-setup.exe"
+$ACSyslogUrl = "http://redirect.audiocodes.com/install/syslogViewer/syslogViewer-setup.exe"
 
 #Mozilla Firefox
 #https://download-installer.cdn.mozilla.net/pub/firefox/releases/
@@ -1963,14 +1958,13 @@ $FirefoxUrl = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/6
 $ChromeUrl = "https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B22D8AD5B-C79D-525B-B197-2E860B2D020D%7D%26lang%3Den%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_1%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi"
 
 #Scripts
-$CsClsLogSizeUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=Mcz5cZO8dCP3QMdF%2fuL7PUYtYv0sR3Ka8cmlRP1Xd%2fw%3d&docid=0a4fff8beacb84c8a91a203d6760223b3&rev=1"
-$CsDeviceUpdatesUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=6Eo88858AFYjzXUjXOQODYBkBjV1MRH6jv7IeOvDkqE%3d&docid=0781d0f22c4db475395afddf25271cf06&rev=1"
-$CsEndpointRegistrationsUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=Zz%2fkPukO37VVyDnbdlj7kZ0zGWiNgpN30MA58ZLIi4U%3d&docid=033b1ebd2c7754056ad59adf80d71df2b&rev=1"
-$WindowsFabricLogSizeUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=QN7v%2fTCJnkl4dnj9XDWYTWk0qix%2fxFNDEt4AsqL8VfA%3d&docid=057db15ff5e3a471f840b779a8f931c75&rev=1"
-#$CleanIISLogsUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=8qN4dZBtdI6GVIjxqqYqXywCSoCS0MXmXMHdDurzTDI%3d&docid=0d041e732cb7844a3b2c2f91d1c098b5b&rev=1"
-$CleanWACIISLogsUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=o4rnSLQrYG%2bJ4Y%2bEg%2bAzTsd07i6pUdMVb%2bQccXv%2bdoc%3d&docid=00300b7b1468d4b70964aee9ed06ff21e&rev=1"
+$CsClsLogSizeUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/Get-CsClsLogSize.ps1"
+$CsDeviceUpdatesUrl = "https://github.com/argiesen/CsScripts/raw/master/Packages/Get-CsDeviceUpdates.v3.0.zip"
+$CsEndpointRegistrationsUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/Get-CsEndpointRegistrations.ps1"
+$WindowsFabricLogSizeUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/Get-WindowsFabricLogSize.ps1"
+$CleanWACIISLogsUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/Clean-IISLogs.ps1"
 #$CsMeetingWarmupUrl = ""
-#$CsSyncDefaultTMXUrl = "https://cerium-my.sharepoint.com/personal/agiesen_ceriumnetworks_com/_layouts/15/guestaccess.aspx?guestaccesstoken=yGFjngL3RGXhgWIczS9jFRPbqa2CNExp2wYXhT4DmqY%3d&docid=06b242aa58c554d43b01f519e7d0e3289&rev=1"
+$CsSyncDefaultTMXUrl = "https://raw.githubusercontent.com/argiesen/CsScripts/master/Sync-CsClsDefaultTmx.ps1"
 
 #Get-ChildItem "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall" | Get-ItemProperty | Sort-Object DisplayName | Format-Table DisplayName,PSChildName
 #Get-ChildItem "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall" | Get-ItemProperty | Sort-Object DisplayName | Format-Table DisplayName,PSChildName
@@ -2109,6 +2103,7 @@ $VersionHashSQL = @{
 	"14.0"="SQL Server 2017"
 }
 
+#.NET Framework version reference
 #https://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx
 $VersionHashNDP = @{
 	378389="4.5"
@@ -2129,6 +2124,9 @@ $VersionHashNDP = @{
 	461310="4.7.1"
 	461808="4.7.2"
 	461814="4.7.2"
+	528040="4.8"
+	528372="4.8"
+	528049="4.8"
 }
 
 
@@ -2192,6 +2190,7 @@ if (!($DownloadsOnly) -and !($PrereqsOnly) -and !($PostInstallTasks)){
 	#$KB2982006Required = Get-HotFix "KB2982006" -ErrorAction SilentlyContinue
 	#$KB2919355Required = Get-HotFix "KB2919355" -ErrorAction SilentlyContinue
 	
+	#Test .NET Framework version
 	if (Test-Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"){
 		$ndpRelease = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -Name "Release").Release
 		#460798 is release for 4.7 on Server 2016, 460805 is release for all other OS
@@ -2633,8 +2632,7 @@ if($Script:Task -eq "PrereqCheck"){
 		$errorPrereqs += "This script must be run with elevated privileges."
 	}
 	
-	#Check for .NET Framework version
-	#Determine version https://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx
+	#Determine .NET Framework version https://msdn.microsoft.com/en-us/library/hh925568%28v=vs.110%29.aspx
 	if (Test-Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"){
 		$ndpRelease = (Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -Name "Release").Release
 		$ndpVersion = $VersionHashNDP.Item($ndpRelease)
@@ -3673,12 +3671,16 @@ if ($Script:Task -eq "PrereqInstall"){
 	#Block .NET Framework updates
 	#Support for 4.6.2 added in February 2017 update
 	#Support for 4.7 added in December 2017 for CU5 or later
+	#Support for 4.7.2 added in CU6 or later
+	#Support for 4.8 added in CU9 or later
+	#https://docs.microsoft.com/en-us/skypeforbusiness/plan-your-deployment/requirements-for-your-environment/server-requirements
+	#https://www.ucmadscientist.com/supported-net-versions-for-lync-and-skype-for-business-server/
 	#https://blogs.technet.microsoft.com/nexthop/2016/02/11/on-net-framework-4-6-2-and-skype-for-businesslync-server-compatibility/
 	#https://blogs.technet.microsoft.com/exchange/2017/06/13/net-framework-4-7-and-exchange-server/
 	#if ($ServerType -match $CsSrvTypes){
-		Write-Log "Blocking .NET Framework 4.7.1 in Windows Update."
-		New-Item -Path "HKLM:\Software\Microsoft\NET Framework Setup\NDP" -Name "WU" -Force -ErrorAction SilentlyContinue | Out-Null
-		New-ItemProperty -Path "HKLM:\Software\Microsoft\NET Framework Setup\NDP\WU" -Name "BlockNetFramework471" -PropertyType DWORD -Value "0x1" -Force -ErrorAction SilentlyContinue | Out-Null
+	#	Write-Log "Blocking .NET Framework 4.7.1 in Windows Update."
+	#	New-Item -Path "HKLM:\Software\Microsoft\NET Framework Setup\NDP" -Name "WU" -Force -ErrorAction SilentlyContinue | Out-Null
+	#	New-ItemProperty -Path "HKLM:\Software\Microsoft\NET Framework Setup\NDP\WU" -Name "BlockNetFramework471" -PropertyType DWORD -Value "0x1" -Force -ErrorAction SilentlyContinue | Out-Null
 	#}
 	
 	#Check and set primary DNS suffix
@@ -3799,20 +3801,14 @@ if ($Script:Task -eq "PrereqInstall"){
 			Install-Software -File "msiexec.exe" -Switches "/i","$SoftwareDir\rewrite_amd64.msi","/quiet","/norestart" -Title "URL Rewrite Module" -ConfirmPath $UrlRewriteGUID -ErrorHandling "Stop"
 		}elseif ($isServer2012R2){
 			if ($KB2919442Required){
-				Install-Software -File "wusa.exe" -Switches "$SoftwareDir\Windows8.1-KB2919442-x64.msu","/quiet","/norestart" -Title "KB2919442" -ConfirmHotfix "KB2919442" -ErrorHandling "Stop"
+				Install-Software -File "wusa.exe" -Switches "$SoftwareDir\Windows8.1-KB2919442-x64.msu","/quiet","/norestart" -Title "KB2919442" -ConfirmHotfix "KB2919442"
 			}
 			if ($KB2919355Required){
 				Install-Software -File "wusa.exe" -Switches "$SoftwareDir\Windows8.1-KB2919355-x64.msu","/quiet","/norestart" -Title "KB2919355" -ConfirmHotfix "KB2919355" -ErrorHandling "Stop"
 			}
 			if ($KB2982006Required){
 				Write-Log "Extracting KB2982006 (IIS Hotfix)."
-				$extractCmd = $SoftwareDir+"\7zip\7za.exe x "+$SoftwareDir+"\478232_intl_x64_zip.exe -o"+$UserTempDir+" -y -aoa"
-				Invoke-Expression $extractCmd -ErrorAction Continue | Out-Null
-				
-				#Install-Software -File "wusa.exe" -Switches "$UserTempDir\Windows8.1-KB2982006-x64.msu","/quiet","/norestart" -Title "KB2982006" -ConfirmHotfix "KB2982006" -ErrorHandling "Stop"
-				
-				New-Item $SoftwareDir\KB2982006 -Type Directory -Force | Out-Null
-				$extractCmd = "expand -F:* $UserTempDir\Windows8.1-KB2982006-x64.msu $UserTempDir"
+				$extractCmd = "expand -F:* $SoftwareDir\windows8.1-kb2982006-x64_d96bea78d5746c48cb712c8ef936c29b5077367f.msu $UserTempDir"
 				Invoke-Expression $extractCmd -ErrorAction Continue | Out-Null
 				
 				Install-Software -File "dism.exe" -Switches "/Online","/Add-Package","/PackagePath:$UserTempDir\Windows8.1-KB2982006-x64.cab","/Quiet","/NoRestart" -Title "KB2982006" `
@@ -4826,10 +4822,10 @@ if ($Script:Task -eq "CSCustomize"){
 			Set-CsPinPolicy -AllowCommonPatterns $false -PINLifetime 0 -MinPasswordLength 4 -WarningAction SilentlyContinue
 			
 			#Mobility Policy
-			Write-Log "Creating mobility policies."
-			New-CsMobilityPolicy "Enable Mobility" -EnableMobility $true -EnableOutsideVoice $false -ErrorAction SilentlyContinue | Out-Null
-			New-CsMobilityPolicy "Enable Mobility+Call via Work" -EnableMobility $true -EnableOutsideVoice $true -ErrorAction SilentlyContinue | Out-Null
-			New-CsMobilityPolicy "No Mobility" -EnableMobility $false -EnableOutsideVoice $false -ErrorAction SilentlyContinue | Out-Null
+			#Write-Log "Creating mobility policies."
+			#New-CsMobilityPolicy "Enable Mobility" -EnableMobility $true -EnableOutsideVoice $false -ErrorAction SilentlyContinue | Out-Null
+			#New-CsMobilityPolicy "Enable Mobility+Call via Work" -EnableMobility $true -EnableOutsideVoice $true -ErrorAction SilentlyContinue | Out-Null
+			#New-CsMobilityPolicy "No Mobility" -EnableMobility $false -EnableOutsideVoice $false -ErrorAction SilentlyContinue | Out-Null
 			
 			#Access Edge Configuration
 			Write-Log "Updating Access Edge configuration."

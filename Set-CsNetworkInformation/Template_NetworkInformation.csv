@@ -1,0 +1,4 @@
+Description,NetworkRegionID,CentralSite,NetworkSiteID,BandwidthPolicy,WANBandwidthInKbps,RealtimeClassInKpbs,InteractiveClassInKbps,Subnet,MaskBits,CompanyName,Location,HouseNumber,HouseNumberSuffix,PreDirectional,StreetName,StreetSuffix,PostDirectional,City,State,PostalCode,Country
+Seattle Datacenter,NA,Seattle,Seattle,10Mb MPLS,10000,2000,,172.16.0.0,16,4255551000,,1000,,N,First,St,,Seattle,WA,98101,US
+Seattle Edge AV Interface,NA,Seattle,Seattle,10Mb MPLS,10000,1000,1000,123.123.123.100,32,4255551000,,1000,,N,First,St,,Seattle,WA,98101,US
+Office 1,NA,Seattle,Office 1,5Mb MPLS,5000,,,172.17.0.0,16,4255551001,Ste 100,100,,,Main,St,W,Seattle,WA,98101,US
